@@ -1,0 +1,58 @@
+<div id="tl_buttons">
+    <a href="<?php echo $this->back_href; ?>" class="header_back" title="<?php echo $this->back_title; ?>"><?php echo $this->back_button; ?></a>
+</div>
+
+<h2 class="sub_headline"><?php echo $this->title; ?></h2>
+
+<div class="tl_xpl" style="margin-bottom: 3em;">
+    <?php if ($this->simulation): ?><p><?php echo $this->simulation; ?></p><?php endif; ?>
+    <?php if ($this->running): ?><p id="index_loading"><?php echo $this->running; ?></p><?php endif; ?>
+    <?php if ($this->complete): ?><p id="index_complete"><?php echo $this->complete; ?></p><?php endif; ?>
+    <?php if ($this->error): ?><p class="tl_error"><?php echo $this->error; ?></p><?php endif; ?>
+    <?php if ($this->content): ?>
+        <div class="content" style="margin-top: 3em;background:transparent url('system/modules/convertx/assets/warn.png') left top no-repeat;padding-left: 50px;min-height: 40px;"><?php echo $this->content; ?></div>
+    <?php endif; ?>
+</div>
+
+<form action="contao/main.php" class="tl_form" method="get">
+    <div class="tl_submit_container">
+        <?php if ($this->running): ?>
+            <noscript><input type="submit" id="index" class="tl_submit" value="<?php echo $this->submit; ?>"></noscript>
+            <script>
+                document.write('<input type="submit" id="index" class="tl_submit" value="<?php echo $this->submit; ?>" disabled>');
+                setTimeout('window.location="contao/main.php?do=convertx&key=runjob&run=<?php echo ($this->subjob ? 'init&jumpToRun='.$this->jumpToRun.'&rootRun='.$this->rootRun.'&id=':'').$this->id; echo ($this->final ? '&final=1' : ''); ?>&rt=<?php echo REQUEST_TOKEN; ?>"', 10);
+            </script>
+        <?php elseif($this->submit): ?>
+            <input type="submit" id="index" class="tl_submit" value="<?php echo $this->submit; ?>">
+        <?php endif; ?>
+
+        <input type="hidden" name="rt" value="<?php echo REQUEST_TOKEN; ?>">
+        <input type="hidden" name="do" value="convertx">
+
+        <?php if ($this->running): ?>
+            <input type="hidden" name="key" value="runjob">
+            <?php if($this->subjob): ?>
+                <input type="hidden" name="run" value="init">
+                <input type="hidden" name="id" value="<?php echo $this->id; ?>">
+                <input type="hidden" name="jumpToRun" value="<?php echo $this->jumpToRun; ?>">
+                <input type="hidden" name="rootRun" value="<?php echo $this->rootRun; ?>">
+            <?php else: ?>
+                <input type="hidden" name="run" value="<?php echo $this->id; ?>">
+            <?php endif; ?>
+            <?php if($this->final): ?>
+                <input type="hidden" name="final" value="1">
+            <?php endif; ?>
+        <?php elseif ($this->complete): ?>
+            <input type="hidden" name="table" value="tl_convertx_run">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>">
+        <?php elseif ($this->abort): ?>
+            <input type="hidden" name="table" value="tl_convertx_run">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>">
+        <?php else: ?>
+            <input type="hidden" name="key" value="runjob">
+            <input type="hidden" name="run" value="init">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>">
+            <input type="checkbox" style="tl_checkbox" name="sim" id="tl_convertx_sim" value="1"> <label for="tl_convertx_sim"><?php echo $this->isSimulation; ?></label>
+        <?php endif; ?>
+    </div>
+</form>

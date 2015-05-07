@@ -1,0 +1,37 @@
+{
+    "name": "delahaye/convertx",
+    "description":"ConvertX: import data into Contao installations.",
+    "keywords":["contao", "import", "importer","data","daten","konvertierung","importieren"],
+    "type": "contao-module",
+    "homepage":"http://convertx.de",
+    "license":"Commercial/LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Christian de la Haye",
+            "email":"service@delahaye.de",
+            "homepage":"http://www.delahaye.de",
+            "role":"Developer"
+        }
+    ],
+    "support":{
+        "issues":"https://github.com/delahaye/convertx/issues"
+    },
+    "require": {
+        "contao/core": ">=3.4,<4-dev",
+        "menatwork/contao-multicolumnwizard": "~3.2",
+        "terminal42/contao-namespace-class-loader": "~1.0"
+    },
+    "conflict": {
+        "contao/core": "3.0.*"
+    },
+    "replace": {
+        "contao-legacy/convertx": "self.version"
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "": "system/modules/convertx"
+            }
+        }
+    }
+}

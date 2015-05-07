@@ -1,0 +1,17 @@
+.convertx_log .error {
+    color: #f80000;
+}
+
+#ctrl_fieldsSource td.operations,
+#ctrl_fieldsTarget td.operations {
+    display:none;
+}
+
+#ctrl_fieldsSource input,
+#ctrl_fieldsSource select,
+#ctrl_fieldsSource .styled_select,
+#ctrl_fieldsTarget input,
+#ctrl_fieldsTarget select,
+#ctrl_fieldsTarget .styled_select {
+    background-color: #efefef;
+}
