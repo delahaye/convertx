@@ -16,4 +16,7 @@
 $GLOBALS['TL_LANG']['tl_settings']['convertx'][0]         = 'ConvertX license';
 $GLOBALS['TL_LANG']['tl_settings']['convertx'][1]         = 'Please enter your license key here.';
 
+$GLOBALS['TL_LANG']['tl_settings']['convertx_ssl'][0]     = 'SSL connection';
+$GLOBALS['TL_LANG']['tl_settings']['convertx_ssl'][1]     = 'For checking the license a secure connection is used.';
+
 $GLOBALS['TL_LANG']['tl_settings']['convertx_legend']     = 'ConvertX';

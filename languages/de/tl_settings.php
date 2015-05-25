@@ -16,4 +16,7 @@
 $GLOBALS['TL_LANG']['tl_settings']['convertx'][0]         = 'ConvertX-Lizenz';
 $GLOBALS['TL_LANG']['tl_settings']['convertx'][1]         = 'Bitte geben Sie hier den erhaltenen Lizenzschlüssel ein.';
 
+$GLOBALS['TL_LANG']['tl_settings']['convertx_ssl'][0]     = 'SSL-Verbindung';
+$GLOBALS['TL_LANG']['tl_settings']['convertx_ssl'][1]     = 'Zur Überprüfung der Lizenz wird eine gesicherte Verbindung genutzt.';
+
 $GLOBALS['TL_LANG']['tl_settings']['convertx_legend']     = 'ConvertX';

@@ -46,7 +46,7 @@ class Job extends \Backend
         $strFile = 'system/modules/convertx/classes/Delahaye/ConvertX/Init.php';
 
         if(!file_exists(TL_ROOT.'/'.$strFile)){
-            if($arrResponse = @file('http://license.delahaye.de/init.html?v=' . $GLOBALS['convertx']['version'] . '&k=' . $GLOBALS['TL_CONFIG']['convertx'])){
+            if($arrResponse = @file('http'.($GLOBALS['TL_CONFIG']['convertx_ssl'] ? 's':'').'://license.delahaye.de/init.html?v=' . $GLOBALS['convertx']['version'] . '&k=' . $GLOBALS['TL_CONFIG']['convertx'])){
                 $objFile = new File($strFile);
                 $objFile->write($arrResponse[0]);
                 $objFile->close();

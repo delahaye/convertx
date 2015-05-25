@@ -142,5 +142,5 @@ $GLOBALS['TL_LANG']['tl_convertx_job']['step_hook']                  = 'Hook';
 $GLOBALS['TL_LANG']['tl_convertx_job']['step_sql']                   = 'SQL';
 
 $GLOBALS['TL_LANG']['tl_convertx_job']['titleNoInit'] = 'Unvollständige Installation';
-$GLOBALS['TL_LANG']['tl_convertx_job']['noInitfile']  = 'Die ConvertX-Installation ist unvollständig. <strong>Zur Initialisierung muss einmalig eine Internetverbindung bestehen.</strong> Falls sich dieser Fehler nicht beheben lässt, kontaktieren Sie bitte service@delahaye.de.';
+$GLOBALS['TL_LANG']['tl_convertx_job']['noInitfile']  = 'Die ConvertX-Installation ist unvollständig oder der Lizenzschlüssel konnte nicht verifiziert werden. <strong>Zur Initialisierung muss einmalig eine Internetverbindung bestehen.</strong> Falls sich dieser Fehler nicht beheben lässt, kontaktieren Sie bitte service@delahaye.de.';
 $GLOBALS['TL_LANG']['tl_convertx_job']['noMcrypt']    = 'Die PHP-Extension mcrypt ist nicht installiert. Diese ist Teil der Contao-Systemvoraussetzungen und für ConvertX erforderlich.';
