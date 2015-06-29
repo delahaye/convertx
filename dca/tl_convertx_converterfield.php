@@ -121,6 +121,7 @@ $GLOBALS['TL_DCA']['tl_convertx_converterfield'] = array
 		'InsertfromfieldTags'         => 'typeInsert,fieldInsert,modeInsert,tagTypeSourceInsert,sourceDelimiterInsert,tagTypeTargetInsert,targetDelimiterInsert',
         'InsertfromfieldBase64'       => 'typeInsert,fieldInsert,modeInsert',
         'InsertfromfieldPass'         => 'typeInsert,fieldInsert,modeInsert',
+        'InsertfromfieldSplitPart'    => 'typeInsert,fieldInsert,modeInsert,splitStringInsert,splitPartInsert',
 		'Insertcountup'               => 'typeInsert,initialValue,start,step',
 		'Insertfix'                   => 'typeInsert,fixInsert',
 		'Insertsql'                   => 'typeInsert,sqlInsert',
@@ -138,6 +139,7 @@ $GLOBALS['TL_DCA']['tl_convertx_converterfield'] = array
 		'UpdatefromfieldDatestring'   => 'typeUpdate,fieldUpdate,modeUpdate,dateFormatUpdate',
 		'UpdatefromfieldTags'         => 'typeUpdate,fieldUpdate,modeUpdate,tagMode,tagTypeSourceUpdate,sourceDelimiterUpdate,tagTypeTargetUpdate,targetDelimiterUpdate',
         'UpdatefromfieldPass'         => 'typeUpdate,fieldUpdate,modeUpdate',
+        'UpdatefromfieldSplitPart'    => 'typeUpdate,fieldUpdate,modeUpdate,splitStringUpdate,splitPartUpdate',
 		'Updatefix'                   => 'typeUpdate,fixUpdate',
 		'Updatesql'                   => 'typeUpdate,sqlUpdate',
 		'Updatehook'                  => 'typeUpdate,hookUpdate',
@@ -234,7 +236,7 @@ $GLOBALS['TL_DCA']['tl_convertx_converterfield'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['mode'],
 			'exclude'                 => true,
 			'inputType'               => 'select',
-			'options'                 => array('Addnew','Expand','Crop','Fill','Bool','Gender','Country','Datestring','Tags','Base64','Pass'),
+			'options'                 => array('Addnew','Expand','Crop','Fill','Bool','Gender','Country','Datestring','Tags','Base64','Pass','SplitPart'),
 			'default'                 => 'Addnew',
 			'reference'               => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['references'],
 			'eval'                    => array('submitOnChange'=>true, 'tl_class'=>'w50','includeBlankOption'=>true),
@@ -327,7 +329,7 @@ $GLOBALS['TL_DCA']['tl_convertx_converterfield'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['mode'],
 			'exclude'                 => true,
 			'inputType'               => 'select',
-			'options'                 => array('Replace','Expand','Crop','Fill','Bool','Gender','Country','Datestring','Tags','Base64','Pass'),
+			'options'                 => array('Replace','Expand','Crop','Fill','Bool','Gender','Country','Datestring','Tags','Base64','Pass','SplitPart'),
 			'default'                 => 'Replace',
 			'reference'               => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['references'],
 			'eval'                    => array('submitOnChange'=>true, 'tl_class'=>'w50'),
@@ -659,6 +661,38 @@ $GLOBALS['TL_DCA']['tl_convertx_converterfield'] = array
             'default'                 => 'male',
             'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
             'sql'                     => "varchar(255) NOT NULL default 'male'"
+        ),
+        'splitStringInsert' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitString'],
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+        'splitStringUpdate' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitString'],
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+        'splitPartInsert' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitPart'],
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'eval'                    => array('rgxp'=>digit, 'maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+        'splitPartUpdate' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitPart'],
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'eval'                    => array('rgxp'=>digit, 'maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
         ),
         'noInsert' => array
         (

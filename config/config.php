@@ -19,6 +19,16 @@ $GLOBALS['convertx']['version'] = '1.0';
 
 
 /**
+ * Available submenus
+ */
+$GLOBALS['convertx']['submenues'] = array(
+    'insert' => array('Tags', 'Fill', 'Expand', 'Crop', 'Datestring', 'Gender', 'Country', 'Bool', 'SplitPart'),
+    'update' => array('Tags', 'Fill', 'Expand', 'Crop', 'Datestring', 'Gender', 'Country', 'Bool', 'SplitPart')
+);
+
+
+
+/**
  * Add configs
  */
 $GLOBALS['convertx']['maxExecutionTime']   = 20;

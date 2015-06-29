@@ -56,7 +56,7 @@ class Converterfield extends \Backend
             if ($objConverter->allowInsert) {
                 if ($objConverterfields->allowInsert) {
                     if ($objConverterfields->typeInsert == 'Insertfromfield') {
-                        if (in_array($objConverterfields->modeInsert, array('Tags', 'Fill', 'Expand', 'Crop', 'Datestring', 'Gender', 'Country', 'Bool'))) {
+                        if (in_array($objConverterfields->modeInsert, $GLOBALS['convertx']['submenues']['insert'])) {
                             $GLOBALS['TL_DCA']['tl_convertx_converterfield']['subpalettes']['allowInsert'] = $GLOBALS['TL_DCA']['tl_convertx_converterfield']['subpalettes']['Insertfromfield' . $objConverterfields->modeInsert];
                             if ($objConverterfields->initialValue != 'ownValue') {
                                 $GLOBALS['TL_DCA']['tl_convertx_converterfield']['subpalettes']['allowInsert'] = str_replace(',start,step', ',step', $GLOBALS['TL_DCA']['tl_convertx_converterfield']['subpalettes']['allowInsert']);
@@ -72,7 +72,7 @@ class Converterfield extends \Backend
 
             if ($objConverter->allowUpdate) {
                 if ($objConverterfields->typeUpdate == 'Updatefromfield') {
-                    if (in_array($objConverterfields->modeUpdate, array('Tags', 'Fill', 'Expand', 'Crop', 'Datestring', 'Gender', 'Country', 'Bool'))) {
+                    if (in_array($objConverterfields->modeUpdate, $GLOBALS['convertx']['submenues']['update'])) {
                         $GLOBALS['TL_DCA']['tl_convertx_converterfield']['subpalettes']['allowUpdate'] = $GLOBALS['TL_DCA']['tl_convertx_converterfield']['subpalettes']['Updatefromfield' . $objConverterfields->modeUpdate];
                     }
                 } else {

@@ -148,6 +148,12 @@ $GLOBALS['TL_LANG']['tl_convertx_converterfield']['femaleVal'][1]        = 'Used
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['maleVal'][0]          = 'Target value for female';
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['maleVal'][1]          = 'Used value in the target.';
 
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitString'][0]      = 'Split string';
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitString'][1]      = 'Char(s) that split up the content. Blank = ´[nbsp]´';
+
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitPart'][0]        = 'Relevant part of the text';
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitPart'][1]        = 'Nummer of the text part, beginning with ´1´´, ´2´ etc.. ´0´=last, ´-1´=one back etc..';
+
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['noInsert'][0]         = 'Keys for NO';
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['noInsert'][1]         = 'Attention - use only small characters! If one of the keys occurs, NO is set, otherwise YES. Empty strings, NULL and false are NO-values.';
 

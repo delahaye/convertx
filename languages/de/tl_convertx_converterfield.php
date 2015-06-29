@@ -154,6 +154,11 @@ $GLOBALS['TL_LANG']['tl_convertx_converterfield']['noInsert'][1]         = 'Acht
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['noUpdate'][0]         = 'Schlüssel für NEIN';
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['noUpdate'][1]         = 'Achtung - nur Kleinbuchstaben verwenden! Kommt einer der Werte vor, wird NEIN angenommen, sonst JA. Leerwerte, NULL und false sind NEIN-Werte.';
 
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitString'][0]      = 'Trennzeichen';
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitString'][1]      = 'Zeichen(folge), nach der der Inhalt aufgeteilt werden soll. Leerzeichen=´[nbsp]´';
+
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitPart'][0]        = 'Relevanter Textteil';
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['splitPart'][1]        = 'Nummer des Textteils, beginnend mit ´1´´, ´2´ etc.. ´0´=letzter, ´-1´=vorletzter etc..';
 
 // references
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['references']['field']             = 'Feld';
@@ -198,3 +203,4 @@ $GLOBALS['TL_LANG']['tl_convertx_converterfield']['references']['update']       
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['references']['Base64']            = 'Wert Base64-dekodieren';
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['references']['Pass']              = 'Passwortgenerierung';
 $GLOBALS['TL_LANG']['tl_convertx_converterfield']['references']['tmpField']          = 'Temporärer Wert';
+$GLOBALS['TL_LANG']['tl_convertx_converterfield']['references']['SplitPart']         = 'Teilinhalt (aufgeteilt)';
