@@ -90,8 +90,10 @@ class Step extends \Backend
 
         $objConverters = ConverterModel::findAll();
 
-        while ($objConverters->next()) {
-            $return[$objConverters->id] = $objConverters->title;
+        if(is_object($objConverters)) {
+            while ($objConverters->next()) {
+                $return[$objConverters->id] = $objConverters->title;
+            }
         }
 
         return $return;
